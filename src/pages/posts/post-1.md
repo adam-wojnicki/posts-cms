@@ -1,8 +1,6 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-featImg:
-  src: "/serum1.png"
-  alt: "Featured image 1"
+featImg: "/serum1.png"
 title: "Hello World!"
 pubDate: 28-11-2022
 description: "Some dummy text here..."

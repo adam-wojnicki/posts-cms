@@ -1,8 +1,6 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-featImg:
-  src: "/ovashape_bust.png"
-  alt: "some image here"
+featImg: "/ovashape_bust.png"
 title: "Hello World 2!"
 pubDate: 28-11-2022
 description: "Abababba."
