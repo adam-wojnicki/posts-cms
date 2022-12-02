@@ -14,8 +14,10 @@ collections:
       - {
           label: "Layout",
           name: "layout",
-          widget: "hidden",
-          default: "../../layouts/PostLayout.astro",
+          widget: "select",
+          options:
+            - {label: "PostLayout", value: "../../layouts/PostLayout.astro"},
+          default: "../../layouts/PostLayout.astro"
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish date", name: "pubDate", widget: "datetime" }
