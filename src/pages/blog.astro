@@ -1,0 +1,10 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BlogPost from "../components/BlogPost.astro";
+const blogPosts = await Astro.glob("../pages/posts/*.md");
+---
+
+<Layout title="Blog">
+  <p>This is a blog post list page</p>
+  {blogPosts.map((bp) => <BlogPost bp={bp} />)}
+</Layout>

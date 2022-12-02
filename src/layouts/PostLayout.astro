@@ -1,0 +1,31 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  {
+    frontmatter.featImg && (
+      <figure>
+        <img
+          src={frontmatter.featImg.src}
+          alt={frontmatter.featImg.alt}
+          width="600"
+        />
+      </figure>
+    )
+  }
+  <small>By {frontmatter.author} | {frontmatter.pubDate.slice(0, 10)}</small>
+  <p><em>{frontmatter.description}</em></p>
+  <p>
+    <strong>TAGS:</strong>
+    {
+      frontmatter.tags.map((t: string) => (
+        <span>
+          <a href={`/tags/${t}`}>{t}</a>
+        </span>
+      ))
+    }
+    <slot />
+  </p>
+</Layout>

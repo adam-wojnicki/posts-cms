@@ -1,0 +1,21 @@
+---
+import Hamburger from "./Hamburger.astro";
+import Navigation from "./Navigation.astro";
+import ThemeSwitch from "./ThemeSwitch.astro";
+---
+
+<header>
+  <h1 class="logo">Logo</h1>
+  <Hamburger />
+  <ThemeSwitch />
+  <Navigation />
+</header>
+<style>
+  .logo {
+    color: crimson;
+    font-size: 4rem;
+  }
+</style>
+<script>
+  import "../scripts/menu";
+</script>

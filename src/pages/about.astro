@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const identity = {
+  firstName: "Adam",
+  country: "Poland",
+  occupation: "Front End Developer",
+  hobbies: ["photography", "web technologies", "sports"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Gatsby JS"];
+---
+
+<Layout title="About me">
+  <p>My name is: {identity.firstName}</p>
+  <p>I live in {identity.country} and work as a {identity.occupation}</p>
+  {
+    identity.hobbies.length >= 2 && (
+      <p>
+        Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
+      </p>
+    )
+  }
+  <p>My skills include:</p>
+  <ul>
+    {skills.map((s) => <li class="skill">{s}</li>)}
+  </ul>
+</Layout>

@@ -1,0 +1,20 @@
+---
+const { bp } = Astro.props;
+---
+
+<div>
+  <a href={bp.url}>
+    {
+      bp.frontmatter.featImg && (
+        <img
+          src={bp.frontmatter.featImg.src}
+          alt={bp.frontmatter.featImg.alt}
+          width="800"
+        />
+      )
+    }
+    <h2>{bp.frontmatter.title}</h2>
+    <p>{bp.frontmatter.description}</p>
+    <small>By {bp.frontmatter.author} | {bp.frontmatter.pubDate}</small>
+  </a>
+</div>
